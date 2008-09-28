@@ -14,11 +14,11 @@ Finally you can use the receiver part and write your own data generation applica
 
 = Usage =
 
-# Check-out a copy of the source into your XCode development environment
-# Open the `AccSim.xcodeproj` project file
-# Make changes to `Info.plist` bundle identifier to match your development certificate. This step is required to install the application on your own iPhone/iPod touch device
-# Build the application, targeting iPhone device
-# Run the application on the device.
+  # Check-out a copy of the source into your XCode development environment
+  # Open the `AccSim.xcodeproj` project file
+  # Make changes to `Info.plist` bundle identifier to match your development certificate. This step is required to install the application on your own iPhone/iPod touch device
+  # Build the application, targeting iPhone device
+  # Run the application on the device.
 
 The application has two views: Accelerometer and Network. The Accelerometer view looks like this
 
@@ -51,7 +51,7 @@ Should you need to use a different UDP port, you have to edit the `Accelerometer
 
 == Other usages ==
 
-If you want to use the AccSim application for other purposes, check out the `testaccsim.py` Python-example. It prints out the messages sent by !AccSim. The format of messages is following:
+If you want to use the AccSim application for other purposes, check out the `testaccsim.py` [http://code.google.com/p/accelerometer-simulator/source/browse/#svn/trunk/Utilities Python-example]. It prints out the messages sent by !AccSim. The format of messages is following:
 {{{
 ACC: <deviceid>,<timestamp>,<x>,<y>,<z>
 }}}
