@@ -22,13 +22,13 @@ Finally you can use the receiver part and write your own data generation applica
 
 The application has two views: Accelerometer and Network. The Accelerometer view looks like this
 
-[http://chrons.pp.fi/temp/AccSim1.png]
+[http://accelerometer-simulator.googlecode.com/svn/wiki/pictures/AccSim1.png]
 
 Here you can switch between the actual sensor and manual operation modes. The sliders show the current accelerometer values. In the manual mode you can slide these yourself, generating accelerometer data manually. Note that in the manual mode you can generate data that would not be possible to generate with the HW sensor.
 
 In the second view (tap the bottom tap bar to activate) you can configure network settings.
 
-[http://chrons.pp.fi/temp/AccSim2.png]
+[http://accelerometer-simulator.googlecode.com/svn/wiki/pictures/AccSim2.png]
 
 When the application starts, network is set to *OFF* and no data is being sent. Switching it to *ON* opens the gates and the application begins sending UDP packets to the network. By feault it uses _broadcast_ mode, which means that all device in the same network (such as your WLAN) can receive the data. In case you plan to run multiple simulators in the same network, you should switch to _unicast_ mode and specify the target IP address manually. You may also change the port to something else if you wish (remember to change it on the receiving end as well).
 
