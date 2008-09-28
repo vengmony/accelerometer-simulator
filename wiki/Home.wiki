@@ -36,10 +36,23 @@ Now that AccSim is sending accelerometer data, it's time to setup someone receiv
 
 == Embedding into your application ==
 
-To embed Accelerometer Simulator capabilities into your own application, simply add the `AccelerometerSimulation.h` and `AccelerometerSimulation.m` files into your project. Then in the source file where you configure `UIAccelerometer`, simply add
+To embed Accelerometer Simulator capabilities into your own application, simply add the `AccelerometerSimulation.h` and `AccelerometerSimulation.m` files from the `Simulator classes` directory into your project. Then in the source file where you configure `UIAccelerometer`, simply add
 {{{
 #import "AccelerometerSimulation.h"
 }}}
 This will override the default behaviour of `UIAccelerometer` when run on the iPhone simulator. When building for device, nothing is changed in your application.
 
 After compiling and running your application on the simulator, it should now be receiving accelerometer data from the AccSim application running on your device.
+
+Should you need to use a different UDP port, you have to edit the `AccelerometerSimulaton.m` file and change the line
+{{{
+#define kAccelerometerSimulationPort 10552
+}}}
+
+== Other usages ==
+
+If you want to use the AccSim application for other purposes, check out the `testaccsim.py` Python-example. It prints out the messages sent by AccSim. The format of messages is following:
+{{{
+ACC: <deviceid>,<timestamp>,<x>,<y>,<z>
+}}}
+The `deviceid` is the unique device id of iPhone, used to identify different sources if there are many (think of a crowd of iPhone users controlling a single game on a big screen...) Next is `timestamp` and acceleration values for `x`,`y` and `z`. These are derived directly from `UIAcceleration`. 
